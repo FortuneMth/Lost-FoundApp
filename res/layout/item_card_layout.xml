@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!-- Item Image -->
+        <ImageView
+            android:id="@+id/itemImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:background="#E0E0E0" />
+
+        <!-- Match Status Badge (shown when matched) -->
+        <TextView
+            android:id="@+id/matchStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MATCHED!"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:visibility="gone" />
+
+        <!-- Item Information -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Item Name -->
+            <TextView
+                android:id="@+id/itemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Category -->
+            <TextView
+                android:id="@+id/itemCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category: Electronics"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_marginBottom="6dp" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/itemDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item description goes here"
+                android:textSize="13sp"
+                android:textColor="#888888"
+                android:layout_marginBottom="8dp"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+            <!-- Location -->
+            <TextView
+                android:id="@+id/itemLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location: Downtown"
+                android:textSize="13sp"
+                android:textColor="#888888"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Status Label -->
+            <TextView
+                android:id="@+id/statusLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status: Lost Item"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Status Slider (Lost ←→ Found) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lost"
+                    android:textSize="12sp"
+                    android:textColor="#FF6B6B"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="8dp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/statusToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:thumb="@drawable/toggle_thumb"
+                    android:track="@drawable/toggle_track" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Found"
+                    android:textSize="12sp"
+                    android:textColor="#51CF66"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp" />
+
+            </LinearLayout>
+
+            <!-- Contact Owner Button (shown only when there's a match) -->
+            <Button
+                android:id="@+id/contactOwnerButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="📧 Contact Owner"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone" />
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:spacing="8dp">
+
+                <Button
+                    android:id="@+id/viewDetailsButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="View Details"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="4dp"
+                    android:background="@drawable/button_background" />
+
+                <Button
+                    android:id="@+id/deleteButton"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:text="Delete"
+                    android:textSize="12sp"
+                    android:layout_marginStart="4dp"
+                    android:background="@drawable/button_background_delete" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Review Your Report"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please verify all information before submitting"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Item Information Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#F8F8F8"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Information"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/reviewItemName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Item Name"
+                    android:textSize="14sp"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Category:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/reviewCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Category"
+                    android:textSize="14sp"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Description:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/reviewDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Description"
+                    android:textSize="14sp"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Date & Time Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#F8F8F8"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date &amp; Time Found"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="12dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/reviewDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:textSize="14sp"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Time:"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/reviewTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Time"
+                    android:textSize="14sp"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Location Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#F8F8F8"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location Found"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/reviewLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:padding="8dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="8dp" />
+
+        </LinearLayout>
+
+        <!-- Images Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#F8F8F8"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Item Images"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="12dp" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:id="@+id/reviewImage1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop"
+                    android:background="#E0E0E0" />
+
+                <ImageView
+                    android:id="@+id/reviewImage2"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop"
+                    android:background="#E0E0E0" />
+
+                <ImageView
+                    android:id="@+id/reviewImage3"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop"
+                    android:background="#E0E0E0" />
+
+                <ImageView
+                    android:id="@+id/reviewImage4"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_row="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="4dp"
+                    android:scaleType="centerCrop"
+                    android:background="#E0E0E0" />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textColor="#666666"
+                android:backgroundTint="#F5F5F5"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp"
+                app:cornerRadius="8dp" />
+
+            <Button
+                android:id="@+id/submitButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Submit Report"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

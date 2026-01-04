@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ========== PROFILE SECTION ========== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#F8F8F8"
+            android:layout_marginBottom="16dp">
+
+            <!-- Profile Header -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Profile Picture & Name -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <ImageView
+                    android:id="@+id/profilePicture"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="16dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userFullName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User Name"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/userEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="user@example.com"
+                        android:textSize="14sp"
+                        android:textColor="#666666"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Edit Profile Button -->
+            <Button
+                android:id="@+id/editProfileButton"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:text="Edit Profile"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:textStyle="bold"
+                app:cornerRadius="6dp" />
+
+        </LinearLayout>
+
+        <!-- ========== ACTIVITY SECTION ========== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#F8F8F8"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Activity"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lost Items"
+                        android:textSize="14sp"
+                        android:textColor="#666666" />
+
+                    <TextView
+                        android:id="@+id/lostItemsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Found Items"
+                        android:textSize="14sp"
+                        android:textColor="#666666" />
+
+                    <TextView
+                        android:id="@+id/foundItemsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/viewItemsButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="View My Items"
+                android:textColor="@color/colorPrimary"
+                android:backgroundTint="#F0F0F0"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                app:cornerRadius="6dp" />
+
+        </LinearLayout>
+
+        <!-- ========== NOTIFICATIONS SECTION ========== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#F8F8F8"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Match Notifications"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/matchNotificationsSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Message Alerts"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/messageAlertsSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Email Updates"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/emailUpdatesSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ========== PRIVACY SECTION ========== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#F8F8F8"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Privacy"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Show Contact Info"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/contactInfoSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Allow Messages"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/allowMessagesSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Public Profile"
+                    android:textSize="14sp"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/publicProfileSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ========== SETTINGS SECTION ========== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#F8F8F8"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Settings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/changePasswordButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Change Password"
+                android:textColor="@color/colorPrimary"
+                android:backgroundTint="#F0F0F0"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                app:cornerRadius="6dp" />
+
+            <Button
+                android:id="@+id/themeButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Change Theme"
+                android:textColor="@color/colorPrimary"
+                android:backgroundTint="#F0F0F0"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp"
+                app:cornerRadius="6dp" />
+
+            <Button
+                android:id="@+id/manageAccountButton"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Manage Account"
+                android:textColor="@color/colorPrimary"
+                android:backgroundTint="#F0F0F0"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                app:cornerRadius="6dp" />
+
+        </LinearLayout>
+
+        <!-- ========== LOGOUT BUTTON ========== -->
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Logout"
+            android:textColor="@color/white"
+            android:backgroundTint="#FF6B6B"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"
+            app:cornerRadius="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

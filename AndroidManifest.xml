@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    
+    <!-- Camera feature -->
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LostAndFoundApp">
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAqIWEJv4kJy64V0d-5FxSCpqXQmNhqX48" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.LostAndFoundApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+        
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".AddItemActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".ReportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".LostItemReportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".LostItemInfoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".LostItemLocationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".activities.LocationPickerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".LostItemReviewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".FoundItemReportActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".FoundItemInfoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".FoundItemLocationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".FoundItemReviewActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".ReportSuccessActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+            
+        <activity
+            android:name=".MapSelectionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+
+        <activity
+            android:name=".ItemDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.LostAndFoundApp" />
+    </application>
+
+</manifest>

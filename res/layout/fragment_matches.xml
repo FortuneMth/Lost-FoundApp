@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Posts"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:padding="16dp"
+        android:gravity="start" />
+
+    <!-- Filter Tabs -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_horizontal"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/lostButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Lost"
+            android:textColor="@color/white"
+            android:background="@drawable/button_background"
+            android:paddingHorizontal="32dp"
+            android:layout_marginEnd="12dp" />
+
+        <Button
+            android:id="@+id/foundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Found"
+            android:textColor="#666666"
+            android:background="@drawable/button_background_light"
+            android:paddingHorizontal="32dp" />
+
+    </LinearLayout>
+
+    <!-- RecyclerView for items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/matchesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp" />
+
+    <!-- Placeholder text (shown when no items) -->
+    <TextView
+        android:id="@+id/placeholderText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No saved items yet!\nReport a lost or found item to see them here."
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="#999999"
+        android:visibility="gone" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>

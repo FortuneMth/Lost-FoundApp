@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Bar with Back Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="#F5F5F5">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="←"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:background="@drawable/button_background_light"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Item Details"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+
+        <!-- Item Image -->
+        <ImageView
+            android:id="@+id/detailItemImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:background="#E0E0E0" />
+
+        <!-- Item Information Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Item Name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item Name"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/detailItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sample Item"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Category -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Category"
+                    android:textSize="12sp"
+                    android:textColor="#999999"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detailItemCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Electronics"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <!-- Status -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Status"
+                    android:textSize="12sp"
+                    android:textColor="#999999"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detailItemStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Lost Item"
+                    android:textSize="14sp"
+                    android:textColor="#FF6B6B"
+                    android:textStyle="bold"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Location -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/detailItemLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Downtown Area"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Date/Time -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:textSize="12sp"
+                    android:textColor="#999999"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detailItemDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Oct 31, 2025"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <!-- Description -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/detailItemDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is a detailed description of the item..."
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="24dp"
+                android:lineSpacingExtra="4dp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Item ID -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Item ID"
+                    android:textSize="12sp"
+                    android:textColor="#999999"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detailItemId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="123456789"
+                    android:textSize="12sp"
+                    android:textColor="#1565C0"
+                    android:fontFamily="monospace"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

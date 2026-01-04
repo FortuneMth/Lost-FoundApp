@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/waveImage"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/wave_white_bg" />
+
+    <TextView
+        android:id="@+id/logoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lost &amp; Found"
+        android:textColor="@color/colorPrimary"
+        android:background="@android:color/transparent"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:layout_gravity="center"
+        android:elevation="2dp" />
+
+</FrameLayout>

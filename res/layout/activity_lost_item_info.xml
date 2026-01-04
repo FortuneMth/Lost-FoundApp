@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Information"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Item Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name of Product*"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/itemNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter item name"
+            android:background="@drawable/edittext_outline"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Category -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category*"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/edittext_outline"
+            android:layout_marginBottom="16dp"
+            android:padding="12dp" />
+
+        <!-- Colour -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Colour"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/colourEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter colour of the product"
+            android:background="@drawable/edittext_outline"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter a short description"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Describe the item, including unique marks etc"
+            android:background="@drawable/edittext_outline"
+            android:padding="12dp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="16dp" />
+
+        <!-- When did you lose it -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="When did you lose it?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Date Input -->
+        <EditText
+            android:id="@+id/lostDateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Date (MM/DD/YYYY)"
+            android:background="@drawable/edittext_outline"
+            android:padding="12dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginBottom="12dp"
+            android:inputType="date" />
+
+        <!-- Time Input -->
+        <EditText
+            android:id="@+id/lostTimeEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select Time (HH:MM)"
+            android:background="@drawable/edittext_outline"
+            android:padding="12dp"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginBottom="32dp"
+            android:inputType="time" />
+
+        <!-- Navigation Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Back"
+                android:textColor="#666666"
+                android:backgroundTint="#F5F5F5"
+                android:textStyle="bold"
+                app:cornerRadius="8dp" />
+
+            <Button
+                android:id="@+id/continueButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Continue"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimary"
+                android:textStyle="bold"
+                app:cornerRadius="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
